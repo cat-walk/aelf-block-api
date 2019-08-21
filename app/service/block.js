@@ -35,6 +35,7 @@ class BlockService extends BaseService {
             let getTxsSql
                 = 'select * from transactions_0  where block_hash=?'
                 + `ORDER BY block_height ${order} limit ? offset ? `;
+            // select * from transactions_0  where block_hash='784613dd3759cb1a441cdc2b6e28c6a961af8acf93e223c6d699e1aa5cb737e2' ORDER BY block_height desc limit 5 offset 10;
             // let getTxsSql = `select SQL_CALC_FOUND_ROWS * from transactions_0  where block_hash=? ORDER BY block_height ${order} limit ? offset ? `;
             let getCountSql = 'select count(*) from transactions_0  where block_hash=?';
             // return sql;

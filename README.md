@@ -31,7 +31,7 @@ in [aelf-block-scan](https://github.com/AElfProject/aelf-block-scan)
 
 - 2.NodeJS: You can see the JS dependencies in pakage.json, we use egg.js(Node.js & Koa).
 
-### 1.Change  the Config
+### 1.Change the Config
 
 ```bash
 cp demo.config.js config.default.js

@@ -14,8 +14,12 @@ class AllService extends BaseService {
         if (['DESC', 'ASC', 'desc', 'asc'].includes(order)) {
             const offset = limit * page;
             // let getBlocksSql = `select SQL_CALC_FOUND_ROWS * from blocks_0 ORDER BY block_height ${order} limit ? offset ?`;
+            // let getBlocksSql = `select * from blocks_0 ORDER BY block_height DESC limit 100 offset 100`;
+            // UNION select * from blocks_unconfirmed ORDER BY block_height DESC limit 100 offset 100
             let getBlocksSql = `select * from blocks_0 ORDER BY block_height ${order} limit ? offset ?`;
             // let getCountSql = `SELECT FOUND_ROWS()`;
+            // let getCountSql = 'select count(tx_count) as total from blocks_0';
+            // explain select count(block_height) as total from blocks_0 UNION select count(block_height) as total from blocks_unconfirmed;
             let getCountSql = 'select count(*) as total from blocks_0';
             // return sql;
             // aelf0.

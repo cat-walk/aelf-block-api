@@ -18,6 +18,8 @@ const blocksRule = {
 class AllController extends Controller {
 
     async getAllBlocks() {
+        
+
         let ctx = this.ctx;
         try {
             let {limit, page, order} = ctx.request.query;

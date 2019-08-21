@@ -12,6 +12,7 @@ class TpsService extends BaseService {
         if (['DESC', 'ASC', 'desc', 'asc'].indexOf(order) > -1) {
 
             const sqlValue = [start_time, end_time];
+            // `select * from tps_0 where start between 1564474967030 and 1564485767030 ORDER BY start ASC`;
             const getTpsSql = `select * from tps_0 where start between ? and ? ORDER BY start ${order}`;
             const getCountSql = 'select count(*) from tps_0 where start between ? and ?';
 
